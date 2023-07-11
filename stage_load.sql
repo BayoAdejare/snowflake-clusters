@@ -26,15 +26,18 @@ COMMENT = 'Staging for credit card data.';
 
 commit;
 
+-- list specified staging area
+list @stg_transactions;
+
 /* 
 -- SnowSQL client commands: 
 -- 1. staging      - PUT 
 -- 2. bulk loading - COPY INTO 
 
-PUT file://archive/credit_card_transactions-ibm_v2.csv @stg_transactions/;
+PUT file://data/credit_card_transactions-ibm_v2.csv @stg_transactions/;
 
 copy into transactions_v1
-    from @stg_transactions/sd254/credit_card_transactions-ibm_v2.csv.gz
+    from @stg_transactions/credit_card_transactions-ibm_v2.csv.gz
     file_format = (format_name = 'csv_gz_format')
     on_error = 'continue'
     force = true;

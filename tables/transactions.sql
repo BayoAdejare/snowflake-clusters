@@ -114,6 +114,7 @@ alter table transactions_v5 cluster by (date_from_parts(t_month, t_year, t_day))
 
 -- check transactions table
 select * from transactions_v5;
+-- alter table transactions_v5 drop clustering key
 
 -- view table metadata
 show tables like 'trans%';
