@@ -15,3 +15,14 @@ Steps taken:
 3. Run PUT command to stage datasets.
 4. Run COPY INTO command to load data.
 5. Evaluate partitioning and clusters i.e. using system functions.
+
+## Notes on clustering information table
+
+|Table|Partitions|Avg_Depth|Avg_Overlap|
+|-----|----------|---------|-----------|
+|v1   |   n/a    |  n/a    |   n/a     |
+|v2   |   18     |  1.0    |   0.0     |
+|v3   |   18     |  2.0    |   1.8889  |
+|v4   |   20     |  2.0    |   1.9     |
+|v5   |   19     |  19.0   |   18.0    |
+

@@ -41,5 +41,26 @@ copy into transactions_v1
     file_format = (format_name = 'csv_gz_format')
     on_error = 'continue'
     force = true;
+copy into transactions_v2
+    from @stg_transactions/credit_card_transactions-ibm_v2.csv.gz
+    file_format = (format_name = 'csv_gz_format')
+    on_error = 'continue'
+    force = true;
+copy into transactions_v3
+    from @stg_transactions/credit_card_transactions-ibm_v2.csv.gz
+    file_format = (format_name = 'csv_gz_format')
+    on_error = 'continue'
+    force = true;
+copy into transactions_v4
+    from @stg_transactions/credit_card_transactions-ibm_v2.csv.gz
+    file_format = (format_name = 'csv_gz_format')
+    on_error = 'continue'
+    force = true;
+copy into transactions_v5
+    from @stg_transactions/credit_card_transactions-ibm_v2.csv.gz
+    file_format = (format_name = 'csv_gz_format')
+    on_error = 'continue'
+    force = true;
+
 
 */

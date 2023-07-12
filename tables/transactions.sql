@@ -67,7 +67,7 @@ cluster by (t_merchant_name);
 -- check transactions table
 select * from transactions_v3;
 
--- table with multi-column cluster key 
+-- table with "multi-column" cluster key 
 create or replace table transactions_v4 (
     t_user varchar(5),
     t_card varchar(1),
@@ -114,7 +114,12 @@ alter table transactions_v5 cluster by (date_from_parts(t_month, t_year, t_day))
 
 -- check transactions table
 select * from transactions_v5;
--- alter table transactions_v5 drop clustering key
+-- show functions 'date_from_parts';
+-- alter table transactions_v5 drop clustering key;
 
 -- view table metadata
 show tables like 'trans%';
+
+
+
+
